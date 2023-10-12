@@ -19,6 +19,8 @@ main .hero h1 {
   margin-left: auto;
   margin-right: auto;
   color: white;
+  font-weight: 300;
+  font-size: 38px;;
 }
 
 main .hero picture {
@@ -36,4 +38,49 @@ main .hero img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+main .row-container{
+  display: flex;
+  justify-content: center;
+}
+
+main .row-container .block-left{
+  width: 650px;
+}
+
+main .row-container .block-right{
+  width: 300px;
+}
+
+main .form-container h2 {
+  font-size: 25px;
+}
+
+main .form-container form {
+  padding: 30px 40px;
+  max-width: 470px;
+  background-color: var(  --highlight-background-color);
+  border-radius: 4px;
+  margin-bottom: 50px;
+}
+
+main .form-container label {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+main .form-container input {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+main .form-container button {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 14px 50px;
+  background-color: var(  --text-highlight-color);
+  border-color: var(  --text-highlight-color);
+  border-radius: 4px;
+  width: 100%;
 }

@@ -16,8 +16,11 @@
   --link-hover-color: #136ff6;
   --background-color: #fff;
   --overlay-background-color: #eee;
-  --highlight-background-color: #ccc;
+  --highlight-background-color: #F5F0EB;
   --text-color: #000;
+  --text-highlight-color: #002776;
+  --footer-background-color: #002776;
+  --footer-text-color: #fff;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback;
@@ -31,7 +34,7 @@
 
   /* heading sizes */
   --heading-font-size-xxl: 48px;
-  --heading-font-size-xl: 40px;
+  --heading-font-size-xl: 39px;
   --heading-font-size-l: 32px;
   --heading-font-size-m: 24px;
   --heading-font-size-s: 20px;
@@ -62,7 +65,7 @@
 }
 
 body {
-  font-size: var(--body-font-size-m);
+  font-size: var(--body-font-size-xs);
   margin: 0;
   font-family: var(--body-font-family);
   line-height: 1.6;
@@ -89,9 +92,16 @@ h4, h5, h6 {
   scroll-margin: calc(var(--nav-height) + 1em);
 }
 
-h1 { font-size: var(--heading-font-size-xxl) }
-h2 { font-size: var(--heading-font-size-xl) }
-h3 { font-size: var(--heading-font-size-l) }
+h1 { font-size: var(--heading-font-size-xl) }
+h2 { 
+  font-size: var(--heading-font-size-l);
+  color: var(--text-highlight-color);
+}
+h3 { 
+  font-size: var(--heading-font-size-s);
+  color: var(--text-highlight-color);
+
+}
 h4 { font-size: var(--heading-font-size-m) }
 h5 { font-size: var(--heading-font-size-s) }
 h6 { font-size: var(--heading-font-size-xs) }
@@ -202,12 +212,12 @@ main blockquote {
 }
 
 main blockquote p::before {
-  content: "“";
+  content: "â€œ";
   line-height: 0;
 }
 
 main blockquote p::after {
-  content: "”";
+  content: "â€";
   line-height: 0;
 }
 
@@ -234,7 +244,8 @@ main .section {
 
 @media (min-width: 600px) {
   main .section {
-    padding: 64px 32px;
+    padding: 30px 32px;
+    margin-top: 30px;
   }
 }
 

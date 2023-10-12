@@ -6,7 +6,7 @@ header .nav-wrapper {
   position: fixed;
 }
 
-header nav {
+header nav, .heading {
   box-sizing: border-box;
   display: grid;
   grid-template:
@@ -145,6 +145,7 @@ header .nav-brand {
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
+  display: none;
 }
 
 header nav .nav-brand img {
@@ -165,6 +166,7 @@ header nav[aria-expanded="true"] .nav-sections {
   display: block;
   visibility: visible;
   align-self: start;
+  color: var(--text-highlight-color);
 }
 
 header nav .nav-sections ul  {
@@ -227,13 +229,13 @@ header nav .nav-sections ul > li > ul > li {
     display: flex;
     gap: 2em;
     margin: 0;
-    font-size: var(--body-font-size-xs);
+    font-size: var(--body-font-size-s);
   }
 
   header nav .nav-sections > ul > li {
     flex: 0 1 auto;
     position: relative;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   header nav .nav-sections > ul > li > ul {
@@ -272,4 +274,13 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+}
+
+.heading {
+  margin-top: 20px;
+  padding: 0 2rem;
+}
+
+.heading .logo {
+  width: 300px;
 }

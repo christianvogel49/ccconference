@@ -85,6 +85,35 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
+function decorateHeading() {
+  const heading = document.createElement('div');
+  heading.classList.add('heading');
+  const logo = document.createElement('div');
+  logo.classList.add('logo');
+  const link = document.createElement('a');
+  link.href = '/';
+  link.title = 'go-to hays.de';
+  const image = document.createElement('img');
+  image.src = 'https://www.hays.de/o/haystheme/images/hays_layout/lr-hays-logo.svg';
+  link.append(image);
+  logo.append(link);
+  heading.append(logo);
+
+  const menulinks = document.createElement('div');
+  const list = document.createElement('ul');
+
+  const career = document.createElement('li');
+  const careerLink = document.createElement('a');
+  careerLink.href = 'https://www.hayscareer.net/';
+  careerLink.innerText = 'Karriere bei Hays';
+  career.append(careerLink);
+  list.append(career);
+
+  menulinks.append(list);
+  heading.append(menulinks);
+  return heading;
+}
+
 /**
  * decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -139,6 +168,7 @@ export default async function decorate(block) {
     decorateIcons(nav);
     const navWrapper = document.createElement('div');
     navWrapper.className = 'nav-wrapper';
+    navWrapper.append(decorateHeading());
     navWrapper.append(nav);
     block.append(navWrapper);
   }
